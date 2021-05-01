@@ -10,7 +10,7 @@ A sample Spring Boot project that was created during my work as a lecturer for t
   
 ## Demo
 
-Deployed on heroku for testing purpose.
+Deployed on heroku for testing purpose: <https://tinder-4-dogs.herokuapp.com>
   
 ## Environment Variables
 
