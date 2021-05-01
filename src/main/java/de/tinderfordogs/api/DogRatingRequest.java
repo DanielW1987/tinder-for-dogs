@@ -2,15 +2,15 @@ package de.tinderfordogs.api;
 
 public class DogRatingRequest {
 
-  private String id;
+  private Long id;
 
   public DogRatingRequest() {}
 
-  public String getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(Long id) {
     this.id = id;
   }
 }
