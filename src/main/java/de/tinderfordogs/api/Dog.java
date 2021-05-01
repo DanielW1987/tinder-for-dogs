@@ -2,17 +2,17 @@ package de.tinderfordogs.api;
 
 public class Dog {
 
-  private final String id;
+  private final Long id;
   private final String name;
   private final String imageUrl;
 
-  public Dog(String id, String name, String imageUrl) {
+  public Dog(Long id, String name, String imageUrl) {
     this.id = id;
     this.name = name;
     this.imageUrl = imageUrl;
   }
 
-  public String getId() {
+  public Long getId() {
     return id;
   }
 

@@ -1,4 +1,4 @@
-package de.tinderfordogs.service;
+package de.tinderfordogs.api;
 
 public class RandomDogResponse {
 
