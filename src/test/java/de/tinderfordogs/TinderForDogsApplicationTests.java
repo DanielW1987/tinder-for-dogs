@@ -9,5 +9,4 @@ class TinderForDogsApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

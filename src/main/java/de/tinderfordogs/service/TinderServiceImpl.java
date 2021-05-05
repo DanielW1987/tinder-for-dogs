@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 @Service
 public class TinderServiceImpl implements TinderService {
 
-  private static final String RANDOM_DOG_IMAGE_API_URL = "https://dog.ceo/api/breeds/image/random";
+  static final String RANDOM_DOG_IMAGE_API_URL = "https://dog.ceo/api/breeds/image/random";
   private final RatedDogRepository repository;
   private final RestTemplate restTemplate;
   private final RandomDogNameCreator dogNameCreator;
@@ -54,10 +54,8 @@ public class TinderServiceImpl implements TinderService {
 
   @Override
   public List<Dog> fetchAllLikedDogs() {
-    List<RatedDogEntity> ratedDogEntities = repository.findAll();
-    return ratedDogEntities
+    return repository.findAllByRatingEquals(Rating.LIKE)
       .stream()
-      .filter(ratedDog -> ratedDog.getRating() == Rating.LIKE)
       .map(ratedDog -> new Dog(ratedDog.getId(), ratedDog.getName(), ratedDog.getImageUrl()))
       .collect(Collectors.toList());
   }
