@@ -1,6 +1,7 @@
 package de.tinderfordogs.web;
 
 import de.tinderfordogs.api.DogRatingRequest;
+import de.tinderfordogs.config.Endpoints;
 import de.tinderfordogs.service.TinderService;
 import de.tinderfordogs.api.Dog;
 import org.springframework.http.ResponseEntity;
@@ -20,25 +21,25 @@ public class TinderRestController {
     this.tinderService = tinderService;
   }
 
-  @GetMapping(path = "/dogs")
+  @GetMapping(path = Endpoints.Rest.DOGS)
   public ResponseEntity<Dog> getRandomDog() {
     var dogImage = tinderService.fetchRandomDog();
     return ResponseEntity.ok(dogImage);
   }
 
-  @GetMapping(path = "/dogs/likes")
+  @GetMapping(path = Endpoints.Rest.DOGS_LIKES)
   public ResponseEntity<List<Dog>> getAllLikedDogs() {
     var dogImages = tinderService.fetchAllLikedDogs();
     return ResponseEntity.ok(dogImages);
   }
 
-  @PostMapping(path = "/dogs/likes")
+  @PostMapping(path = Endpoints.Rest.DOGS_LIKES)
   public ResponseEntity<Void> likeDog(@RequestBody DogRatingRequest likedDog) {
     tinderService.likeDog(likedDog);
     return ResponseEntity.ok().build();
   }
 
-  @PostMapping(path = "/dogs/dislikes")
+  @PostMapping(path = Endpoints.Rest.DOGS_DISLIKES)
   public ResponseEntity<Void> dislikeDog(@RequestBody DogRatingRequest dislikedDog) {
     tinderService.dislikeDog(dislikedDog);
     return ResponseEntity.ok().build();
