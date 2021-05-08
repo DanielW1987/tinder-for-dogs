@@ -13,6 +13,7 @@ public class Endpoints {
     public static final String EMPTY_INDEX = "";
     public static final String SLASH_INDEX = "/";
     public static final String LOGIN = "/login";
+    public static final String REGISTER = "/register";
     public static final String GALLERY = "/gallery";
     public static final String TINDER = "/tinder";
   }
