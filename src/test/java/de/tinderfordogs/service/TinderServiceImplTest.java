@@ -1,6 +1,6 @@
 package de.tinderfordogs.service;
 
-import de.tinderfordogs.api.RandomDogResponse;
+import de.tinderfordogs.web.api.RandomDogResponse;
 import de.tinderfordogs.persistence.RatedDogEntity;
 import de.tinderfordogs.persistence.RatedDogRepository;
 import de.tinderfordogs.persistence.Rating;

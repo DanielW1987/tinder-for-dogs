@@ -1,9 +1,9 @@
 package de.tinderfordogs.web;
 
-import de.tinderfordogs.api.DogRatingRequest;
+import de.tinderfordogs.web.api.DogRatingRequest;
 import de.tinderfordogs.config.Endpoints;
 import de.tinderfordogs.service.TinderService;
-import de.tinderfordogs.api.Dog;
+import de.tinderfordogs.web.api.Dog;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

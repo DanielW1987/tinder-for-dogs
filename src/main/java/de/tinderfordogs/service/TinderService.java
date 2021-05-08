@@ -1,7 +1,7 @@
 package de.tinderfordogs.service;
 
-import de.tinderfordogs.api.Dog;
-import de.tinderfordogs.api.DogRatingRequest;
+import de.tinderfordogs.web.api.Dog;
+import de.tinderfordogs.web.api.DogRatingRequest;
 
 import java.util.List;
 

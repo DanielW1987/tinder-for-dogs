@@ -1,4 +1,4 @@
-package de.tinderfordogs.api;
+package de.tinderfordogs.web.api;
 
 public class DogRatingRequest {
 
