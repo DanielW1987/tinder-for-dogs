@@ -33,7 +33,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
       .formLogin()
         .loginPage(Endpoints.Site.LOGIN)
         .loginProcessingUrl(Endpoints.Site.LOGIN)
-        .failureHandler(new CustomAuthenticationFailureHandler())
+        .failureUrl(Endpoints.Site.LOGIN + "?badCredentials")
+        //.failureHandler(new CustomAuthenticationFailureHandler()) // as an alternative
       .and()
       .httpBasic();
   }
