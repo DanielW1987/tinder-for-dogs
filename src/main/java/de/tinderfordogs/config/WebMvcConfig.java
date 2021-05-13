@@ -16,7 +16,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
   public void addViewControllers(ViewControllerRegistry registry) {
     // Frontend pages
     registry.addViewController(Endpoints.Site.INDEX).setViewName(ViewNames.INDEX);
-    registry.addViewController(Endpoints.Site.EMPTY_INDEX).setViewName(ViewNames.INDEX);
     registry.addViewController(Endpoints.Site.SLASH_INDEX).setViewName(ViewNames.INDEX);
     registry.addViewController(Endpoints.Site.LOGIN).setViewName(ViewNames.LOGIN);
     registry.addViewController(Endpoints.Site.GALLERY).setViewName(ViewNames.GALLERY);
