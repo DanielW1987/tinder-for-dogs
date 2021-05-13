@@ -18,6 +18,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
           .antMatchers(
             Endpoints.Site.INDEX,
             Endpoints.Site.SLASH_INDEX,
+            Endpoints.Site.LOGIN,
             Endpoints.Site.REGISTER
           ).permitAll()
           // Static resources
@@ -30,6 +31,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
       .authorizeRequests().anyRequest().authenticated()
       .and()
       .formLogin()
+        .loginPage(Endpoints.Site.LOGIN)
+        .loginProcessingUrl(Endpoints.Site.LOGIN)
+        .failureHandler(new CustomAuthenticationFailureHandler())
       .and()
       .httpBasic();
   }
