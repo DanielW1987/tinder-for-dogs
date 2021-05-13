@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html th:replace="~{frontend/layout :: layout (~{::body})}" lang="en">
+<html th:replace="~{frontend/layout :: layout (~{::body})}" lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
 <body>
     <h1>Welcome to Tinder for Dogs!</h1>
+    <div sec:authorize="isAuthenticated()">
+        This content is only shown to authenticated users.
+    </div>
 </body>
 </html>

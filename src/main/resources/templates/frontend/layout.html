@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html th:fragment="layout (template)" lang="en">
+<html th:fragment="layout (template)" lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <title>Tinder for Dogs</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -34,10 +34,17 @@
                             <a class="nav-link" th:href="@{/gallery}" th:classappend="${#request.requestURI == '/gallery' ? 'active':''}">Gallery</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <a class="btn btn-outline-primary me-2" th:href="@{/login}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
-                        <a class="btn btn-outline-primary" th:href="@{/register}" th:classappend="${#request.requestURI == '/register' ? 'active':''}">Register</a>
-                    </form>
+                    <div class="d-flex">
+                        <div sec:authorize="!isAuthenticated()">
+                            <a class="btn btn-outline-primary me-2" th:href="@{/login}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
+                            <a class="btn btn-outline-primary" th:href="@{/register}" th:classappend="${#request.requestURI == '/register' ? 'active':''}">Register</a>
+                        </div>
+                        <div sec:authorize="isAuthenticated()">
+                            <form id="logout-form" method="POST" action="#" th:action="@{/logout}">
+                                <button type="submit" class="btn btn-outline-primary">Logout</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>

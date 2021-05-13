@@ -5,6 +5,9 @@
     <div th:if="${param.badCredentials}" class="alert alert-danger" role="alert">
         <span>Invalid username or password!</span>
     </div>
+    <div th:if="${param.logout}" class="alert alert-success" role="alert">
+        <span>You have been successfully logged out.</span>
+    </div>
     <form id="loginForm" name="loginForm" action="#" th:action="@{/login}" method="POST">
         <div class="mb-3 col-md-3">
             <label for="username" class="form-label">Username</label>
