@@ -1,4 +1,4 @@
-package de.tinderfordogs.persistence;
+package de.tinderfordogs.persistence.dog;
 
 public enum Rating {
 
