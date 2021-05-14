@@ -1,9 +1,9 @@
 package de.tinderfordogs.service;
 
 import de.tinderfordogs.web.api.RandomDogResponse;
-import de.tinderfordogs.persistence.RatedDogEntity;
-import de.tinderfordogs.persistence.RatedDogRepository;
-import de.tinderfordogs.persistence.Rating;
+import de.tinderfordogs.persistence.dog.RatedDogEntity;
+import de.tinderfordogs.persistence.dog.RatedDogRepository;
+import de.tinderfordogs.persistence.dog.Rating;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,5 +1,8 @@
 package de.tinderfordogs.persistence;
 
+import de.tinderfordogs.persistence.dog.RatedDogEntity;
+import de.tinderfordogs.persistence.dog.RatedDogRepository;
+import de.tinderfordogs.persistence.dog.Rating;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

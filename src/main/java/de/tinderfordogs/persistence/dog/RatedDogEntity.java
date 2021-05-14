@@ -1,4 +1,4 @@
-package de.tinderfordogs.persistence;
+package de.tinderfordogs.persistence.dog;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
