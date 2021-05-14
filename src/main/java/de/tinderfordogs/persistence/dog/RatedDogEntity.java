@@ -11,11 +11,12 @@ import javax.persistence.Table;
 import static javax.persistence.GenerationType.*;
 
 @Entity
-@Table(name = "rated_dog")
+@Table(name = "rated_dogs")
 public class RatedDogEntity {
 
   @Id
   @GeneratedValue(strategy = IDENTITY)
+  @Column(name = "id")
   private Long id;
 
   @Column(name = "name", nullable = false)
