@@ -3,15 +3,15 @@
 <body>
     <h1>Login</h1>
     <div th:if="${param.badCredentials}" class="alert alert-danger" role="alert">
-        <span>Invalid username or password!</span>
+        <span>Invalid email or password!</span>
     </div>
     <div th:if="${param.logout}" class="alert alert-success" role="alert">
         <span>You have been successfully logged out.</span>
     </div>
     <form id="loginForm" name="loginForm" action="#" th:action="@{/login}" method="POST">
         <div class="mb-3 col-md-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="" required autofocus>
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="" required autofocus>
         </div>
         <div class="mb-3 col-md-3">
             <label for="password" class="form-label">Password</label>
