@@ -34,6 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .loginPage(Endpoints.Site.LOGIN)
         .loginProcessingUrl(Endpoints.Site.LOGIN)
         .failureUrl(Endpoints.Site.LOGIN + "?badCredentials")
+        .usernameParameter("email")
         //.failureHandler(new CustomAuthenticationFailureHandler()) // as an alternative
       .and()
       .httpBasic();
