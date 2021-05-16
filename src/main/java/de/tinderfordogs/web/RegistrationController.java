@@ -4,8 +4,6 @@ import de.tinderfordogs.config.Endpoints;
 import de.tinderfordogs.config.ViewNames;
 import de.tinderfordogs.service.UserService;
 import de.tinderfordogs.web.request.RegistrationRequest;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -30,7 +28,7 @@ public class RegistrationController {
   @PostMapping(path = Endpoints.Site.REGISTER)
   public RedirectView handleRegistrationRequest(RegistrationRequest registrationRequest) {
     userService.createUser(registrationRequest);
-    return new RedirectView(Endpoints.Site.LOGIN);
+    return new RedirectView(Endpoints.Site.LOGIN + "?registrationSuccessful");
   }
 
   @ModelAttribute(name = "registrationRequest")
