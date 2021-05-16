@@ -6,15 +6,18 @@ import de.tinderfordogs.web.request.RegistrationRequest;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService implements UserDetailsService {
 
   private final UserRepository userRepository;
+  private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
-  public UserService(UserRepository userRepository) {
+  public UserService(UserRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder) {
     this.userRepository = userRepository;
+    this.bCryptPasswordEncoder = bCryptPasswordEncoder;
   }
 
   public void createUser(RegistrationRequest registrationRequest) {
@@ -23,7 +26,7 @@ public class UserService implements UserDetailsService {
       registrationRequest.getLastName(),
       registrationRequest.getEmail(),
       registrationRequest.getBio(),
-      registrationRequest.getPassword()
+      bCryptPasswordEncoder.encode(registrationRequest.getPassword())
     );
     userRepository.save(userEntity);
   }
