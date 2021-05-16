@@ -8,7 +8,7 @@ create table if not exists rated_dogs
     rating varchar(255) not null
 );
 
-alter table rated_dogs owner to qlbcaawnfiiuno;
+alter table rated_dogs owner to puestpknmhsypt;
 
 create table if not exists users
 (
@@ -22,4 +22,4 @@ create table if not exists users
     encrypted_password varchar(60) not null
 );
 
-alter table users owner to qlbcaawnfiiuno;
+alter table users owner to puestpknmhsypt;
