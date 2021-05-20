@@ -40,15 +40,14 @@
                         </li>
                     </ul>
                     <div class="d-flex">
-                        <div sec:authorize="!isAuthenticated()">
+<!--                        <div sec:authorize="!isAuthenticated()">-->
                             <a class="btn btn-outline-primary me-2" th:href="@{/login}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
-                            <a class="btn btn-outline-primary" th:href="@{/register}" th:classappend="${#request.requestURI == '/register' ? 'active':''}">Register</a>
-                        </div>
-                        <div sec:authorize="isAuthenticated()">
+<!--                        </div>-->
+<!--                        <div sec:authorize="isAuthenticated()">-->
                             <form id="logout-form" method="POST" action="#" th:action="@{/logout}">
                                 <button type="submit" class="btn btn-outline-primary">Logout</button>
                             </form>
-                        </div>
+<!--                        </div>-->
                     </div>
                 </div>
             </div>
