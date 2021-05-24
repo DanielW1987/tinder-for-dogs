@@ -2,5 +2,9 @@
 <html th:replace="~{frontend/layout :: layout (~{::body})}" lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
 <body>
     <h1>Welcome to Tinder for Dogs!</h1>
+    <div th:if="${param.logout}" class="alert alert-success" role="alert">
+        <span>You have been successfully logged out.</span>
+    </div>
+    <h2 th:if="${name}" th:text="'Welcome, ' + ${name} + '!'"></h2>
 </body>
 </html>

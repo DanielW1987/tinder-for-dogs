@@ -18,3 +18,10 @@ spring:
     hibernate:
       ddl-auto: validate # (create, create-drop, validate, update)
     open-in-view: false
+
+okta:
+  oauth2:
+    issuer: "https://dev-23924800.okta.com/oauth2/default"
+    client-id: ${OKTA_CLIENT_ID}
+    client-secret: ${OKTA_CLIENT_SECRET}
+    redirect-uri: "/authorization-code/callback"
