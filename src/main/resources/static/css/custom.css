@@ -1,3 +1,10 @@
 h1 {
     color: darkslategrey;
 }
+
+.dog-photo {
+    height: 400px;
+    width: auto;
+    border: 1px darkgray solid;
+    padding: 0;
+}
