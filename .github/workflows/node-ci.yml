@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-node@v2
       - name: Install Dependencies
         working-directory: ./src/main/resources/static/js
-        run: npm install
+        run: npm ci
       - name: Run Tests
         working-directory: ./src/main/resources/static/js
         run: npm test
