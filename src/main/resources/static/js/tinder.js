@@ -36,6 +36,8 @@ export default {
         this.dogName = data.name;
         this.imageUrl = data.imageUrl;
         this.dogId = data.id;
+      }).catch(reason => {
+        console.log(`There was an error during fetch: ${reason}`);
       });
     },
     like() {
