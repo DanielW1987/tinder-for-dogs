@@ -2,9 +2,15 @@ import { mount } from '@vue/test-utils'
 import Tinder from './tinder.js';
 global.fetch = require('node-fetch');
 
-global.fetch = {
-  fetch() { return Promise.resolve({ data: [] }) },
-}
+global.fetch = jest.fn(() =>
+  Promise.resolve({
+    json: () => Promise.resolve({
+      name: "Rex",
+      imageUrl: "https://image-url.com",
+      id: 1
+    }),
+  })
+);
 
 test('shows heading', () => {
   const wrapper = mount(Tinder, {
