@@ -1,0 +1,38 @@
+{
+  "name": "tinder-4-dogs",
+  "version": "1.0.0",
+  "description": "boot-vue-test",
+  "main": "main.js",
+  "type": "module",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.14.0",
+    "@babel/preset-env": "^7.14.2",
+    "@vue/test-utils": "^2.0.0-rc.6",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-vue": "^7.9.0",
+    "vue-jest": "^5.0.0-alpha.10"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ghttps://github.com/DanielW1987/tinder-for-dogs"
+  },
+  "author": "Daniel Wagner",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "vue": "^3.0.11"
+  }
+}

@@ -1,6 +1,8 @@
-const app = Vue.createApp({});
-app.component('random-dog', {
+export default {
   template: `
+       <div class="row text-center">
+          <h2>Do you like him/her?</h2>
+       </div>
         <div class="row">
             <img v-bind:src="imageUrl" class="rounded mx-auto d-block dog-photo" alt="Dog photo">
         </div>
@@ -79,5 +81,4 @@ app.component('random-dog', {
   mounted: function() {
     this.loadRandomDog();
   }
-});
-app.mount('#tinder-app');
+};
