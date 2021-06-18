@@ -1,7 +1,7 @@
 export default {
   template: `
        <div class="row text-center">
-          <h2>Do you like him/her?</h2>
+          <h2>{{ title }}</h2>
        </div>
         <div class="row">
             <img v-bind:src="imageUrl" class="rounded mx-auto d-block dog-photo" alt="Dog photo">
@@ -25,6 +25,7 @@ export default {
       imageUrl: '',
     };
   },
+  props: ['title'],
   methods: {
     loadRandomDog() {
       fetch('/dogs').then((response) => {

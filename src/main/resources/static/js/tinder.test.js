@@ -1,9 +1,13 @@
 import { mount } from '@vue/test-utils'
 import Tinder from './tinder.js';
-global.fetch = require("node-fetch");
+global.fetch = require('node-fetch');
 
-test("shows heading", () => {
-  const wrapper = mount(Tinder);
+test('shows heading', () => {
+  const wrapper = mount(Tinder, {
+    props: {
+      title: 'Do you like him/her?'
+    }
+  });
 
-  expect(wrapper.text()).toContain("Do you like him/her?");
+  expect(wrapper.text()).toContain('Do you like him/her?');
 })
