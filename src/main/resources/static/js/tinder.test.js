@@ -2,6 +2,10 @@ import { mount } from '@vue/test-utils'
 import Tinder from './tinder.js';
 global.fetch = require('node-fetch');
 
+global.fetch = {
+  fetch() { return Promise.resolve({ data: [] }) },
+}
+
 test('shows heading', () => {
   const wrapper = mount(Tinder, {
     props: {
