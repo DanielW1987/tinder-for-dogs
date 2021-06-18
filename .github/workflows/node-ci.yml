@@ -1,0 +1,23 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use node 16.2
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.2.0
+      - name: Install dependencies
+        working-directory: ./src/main/resources/static/js
+        run: npm ci
+      - name: Run tests
+        working-directory: ./src/main/resources/static/js
+        run: npm test

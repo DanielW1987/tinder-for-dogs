@@ -1,11 +1,13 @@
-const app = Vue.createApp({});
-app.component('random-dog', {
+export default {
   template: `
+       <div class="row text-center">
+          <h2>{{ title }}</h2>
+       </div>
         <div class="row">
             <img v-bind:src="imageUrl" class="rounded mx-auto d-block dog-photo" alt="Dog photo">
         </div>
         <div class="row">
-            <h2 class="text-center">{{ dogName }}</h2>
+            <h2 class="text-center" id="dog-name">{{ dogName }}</h2>
         </div>
         <div class="row">
             <div class="col-6 text-end">
@@ -23,6 +25,7 @@ app.component('random-dog', {
       imageUrl: '',
     };
   },
+  props: ['title'],
   methods: {
     loadRandomDog() {
       fetch('/dogs').then((response) => {
@@ -79,5 +82,4 @@ app.component('random-dog', {
   mounted: function() {
     this.loadRandomDog();
   }
-});
-app.mount('#tinder-app');
+};
