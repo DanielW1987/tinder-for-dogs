@@ -22,6 +22,6 @@ To run this project, you will need to add the following environment variables to
 
 To run tests, run the following command
 
-```bash
+```
   gradle clean test
 ```
